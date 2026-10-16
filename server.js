@@ -27,7 +27,7 @@ loadEnv(path.join(__dirname, '.env'));
 
 const PORT = Number(process.env.PORT) || 3000;
 // Mặc định chỉ cho máy này truy cập. Muốn cả mạng LAN dùng: HOST=0.0.0.0 trong .env
-const HOST = process.env.HOST || '127.0.0.1';
+const HOST = process.env.HOST || '0.0.0.0';
 const API_KEY = (process.env.GEMINI_API_KEY || '').trim();
 const ALLOWED_MODELS = new Set(['gemini-2.5-flash', 'gemini-2.5-pro']);
 const MAX_BODY = 25 * 1024 * 1024; // ảnh Base64 có thể khá nặng
